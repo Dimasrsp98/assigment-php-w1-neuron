@@ -93,6 +93,7 @@ class Rumus {
     }
 }
 
+/*
 class ChemistryFormulas {
     public static function massaMol($massaZat, $jumlahMol) {
         return $massaZat / $jumlahMol;
@@ -222,7 +223,122 @@ class ChemistryFormulas {
         return $kecepatanReaksi;
 
     }
+
+     public static function kecepatanPengendapan($massaEndapan, $waktu) {
+        $kecepatanPengendapan = $massaEndapan / $waktu;
+        return $kecepatanPengendapan;
+    }
+
+    public static function tekananOsmotik($jumlahMol, $konstantaOsmotik, $suhu) {
+        $tekananOsmotik = $jumlahMol * $konstantaOsmotik * $suhu;
+        return $tekananOsmotik;
+    }
+
+    public static function lajuReaksi($perubahanKonsentrasi, $perubahanWaktu) {
+        $lajuReaksi = $perubahanKonsentrasi / $perubahanWaktu;
+        return $lajuReaksi;
+    }
+
+    public static function pHlarutan($konsentrasiHidrogen) {
+        $pH = -log10($konsentrasiHidrogen);
+        return $pH;
+    }
+
+    public static function pOHlarutan($konsentrasiHidroksida) {
+        $pOH = -log10($konsentrasiHidroksida);
+        return $pOH;
+    }
+
+    public static function panasReaksi($massaZat, $kalorJenis, $perubahanSuhu) {
+        $panasReaksi = $massaZat * $kalorJenis * $perubahanSuhu;
+        return $panasReaksi;
+    }
+
+    public static function kelarutanZat($jumlahMolZat, $volumeLarutan) {
+        $kelarutan = $jumlahMolZat / $volumeLarutan;
+        return $kelarutan;
+    }
+     public static function massaJenis($massa, $volume) {
+        $massaJenis = $massa / $volume;
+        return $massaJenis;
+    }
+
+    public static function massaLarutan($massaSolute, $massaSolvent) {
+        $massaLarutan = $massaSolute + $massaSolvent;
+        return $massaLarutan;
+    }
+
+    public static function konsentrasiPersen($jumlahSolute, $jumlahSolvent) {
+        $konsentrasiPersen = ($jumlahSolute / $jumlahSolvent) * 100;
+        return $konsentrasiPersen;
+    }
+
+    public static function energiAktivasi($konstantaGas, $suhu, $faktorFrekuensi) {
+        $energiAktivasi = $konstantaGas * $suhu * $faktorFrekuensi;
+        return $energiAktivasi;
+    }
+
+    public static function massaMolar($massa, $jumlahMol) {
+        $massaMolar = $massa / $jumlahMol;
+        return $massaMolar;
+    }
+
+    public static function massaJenisLarutan($massaLarutan, $volumeLarutan) {
+        $massaJenisLarutan = $massaLarutan / $volumeLarutan;
+        return $massaJenisLarutan;
+    }
+
+    public static function konstantaGasIdeal($tekanan, $volume, $jumlahMol, $suhu) {
+        $konstantaGasIdeal = ($tekanan * $volume) / ($jumlahMol * $suhu);
+        return $konstantaGasIdeal;
+    }
+
+    public static function suhuReaksi($energiAktivasi, $konstantaGas, $faktorFrekuensi) {
+        $suhuReaksi = $energiAktivasi / ($konstantaGas * $faktorFrekuensi);
+        return $suhuReaksi;
+    }
+
+    public static function volumeMol($jumlahMol, $konstantaGas, $suhu) {
+        $volumeMol = $jumlahMol * ($konstantaGas * $suhu);
+        return $volumeMol;
+    }
+
+    public static function konstantaGasMolar($konstantaGas, $massaMol) {
+        $konstantaGasMolar = $konstantaGas / $massaMol;
+        return $konstantaGasMolar;
+    }
+
+    public static function massaZat($jumlahMol, $massaMol) {
+        $massaZat = $jumlahMol * $massaMol;
+        return $massaZat;
+    }
+
+    public static function kelarutan($massaZat, $massaPelarut) {
+        $kelarutan = $massaZat / $massaPelarut;
+        return $kelarutan;
+    }
+
+    public static function konsentrasiPersen($jumlahSolute, $jumlahSolvent) {
+        $konsentrasiPersen = ($jumlahSolute / $jumlahSolvent) * 100;
+        return $konsentrasiPersen;
+    }
+
+    public static function energiAktivasi($konstantaGas, $suhu, $faktorFrekuensi) {
+        $energiAktivasi = $konstantaGas * $suhu * $faktorFrekuensi;
+        return $energiAktivasi;
+    }
+
+    public static function massaMolar($massa, $jumlahMol) {
+        $massaMolar = $massa / $jumlahMol;
+        return $massaMolar;
+    }
+
+    public static function massaJenisLarutan($massaLarutan, $volumeLarutan) {
+        $massaJenisLarutan = $massaLarutan / $volumeLarutan;
+        return $massaJenisLarutan;
+    }
 }
+*/
 
 // Mengambil input dari halaman HTML untuk setiap rumus
 if (isset($_POST['hitungPersegi'])) {
@@ -369,7 +485,7 @@ if (isset($_POST['tonToGram'])) {
     <title>KALKULATOR Rumus Matematika dan Fisika</title>
 </head>
 <body>
-    <h2>Kalkulator Rumus Matematika dan Fisika Sederhana</h2>
+    <h2>Kalkulator Rumus Matematika , Fisika dan Kimia Sederhana </h2>
 
     <h3>Rumus Menghitung Luas Persegi</h3>
     <form method="POST" action="">
